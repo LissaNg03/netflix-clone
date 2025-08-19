@@ -1,6 +1,10 @@
 /** @format */
 import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+	createBrowserRouter,
+	Navigate,
+	RouterProvider,
+} from "react-router-dom";
 import SignUp from "./Pages/SignUp";
 import HomePage from "./Pages/HomePage";
 import WatchTrailer from "./Pages/WatchTrailer";
@@ -19,11 +23,14 @@ const router = createBrowserRouter(
 			path: "/watch-trailer",
 			element: <WatchTrailer />,
 		},
+		// Add this redirect route 👇
+		{
+			path: "/netflix-clone",
+			element: <Navigate to="/" replace />,
+		},
 	],
 	{
-		basename: window.location.hostname.includes("github.io")
-			? "/netflix-clone/"
-			: "/",
+		basename: "/netflix-clone/",
 	}
 );
 

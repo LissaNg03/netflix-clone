@@ -9,7 +9,7 @@ export default function FetchMovies() {
 	const [error, setError] = useState(null);
 
 	useEffect(() => {
-		fetch("/movies.json")
+		fetch("/netflix-clone/movies.json")
 			.then((res) => res.json())
 			.then(setData)
 			.catch((err) => setError(err.message))
