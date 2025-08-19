@@ -11,7 +11,7 @@ export default function HomePage() {
 	if (loading) {
 		return (
 			<main className="bg w-screen h-screen grid place-content-center">
-				<img src="/assets/netflix_spinner.gif" alt="Loading..." />
+				<img src="/netflix-clone/assets/netflix_spinner.gif" alt="Loading..." />
 			</main>
 		);
 	}

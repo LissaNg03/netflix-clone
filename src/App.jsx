@@ -30,7 +30,9 @@ const router = createBrowserRouter(
 		},
 	],
 	{
-		basename: "/netflix-clone/",
+		basename: window.location.pathname.startsWith("/netflix-clone")
+			? "/netflix-clone/"
+			: "/",
 	}
 );
 
