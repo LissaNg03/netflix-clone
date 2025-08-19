@@ -21,8 +21,9 @@ const router = createBrowserRouter(
 		},
 	],
 	{
-		basename:
-			window.location.hostname === "localhost" ? "/" : "/netflix-clone/",
+		basename: window.location.hostname.includes("github.io")
+			? "/netflix-clone/"
+			: "/",
 	}
 );
 
